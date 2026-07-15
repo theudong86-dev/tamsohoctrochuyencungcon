@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản Hướng Dẫn: Trò Chuyện Cùng Con Hiệu Quả — Tâm Số Học</title>
+    <meta name="description" content="Nhận miễn phí bản hướng dẫn tương tác trò chuyện cùng con hiệu quả. Hiểu con sâu hơn, nói con dễ nghe hơn, đồng hành cùng con nhẹ nhàng hơn mỗi ngày.">
+    <link rel="canonical" href="https://tamsohoctrochuyencungcon.vercel.app">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* CSS Reset & Variable Systems */
+        :root {
+            --bg-warm: #fdfbf7; /* Nền kem ấm áp, dịu nhẹ */
+            --bg-card: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            
+            /* Tone màu Mẹ & Bé: Hồng cam đào ấm áp kết hợp xanh lá Sage dịu mắt */
+            --primary: #f97316; /* Cam đào ấm áp */
+            --primary-light: #ffedd5;
+            --secondary: #ec4899; /* Hồng yêu thương */
+            --secondary-light: #fce7f3;
+            --sage: #0d9488; /* Xanh lá dịu dàng, tin cậy */
+            --sage-light: #ccfbf1;
+            
+            --border-soft: rgba(249, 115, 22, 0.08);
+            --font-sans: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --shadow-soft: 0 10px 30px rgba(249, 115, 22, 0.05);
+            --shadow-hover: 0 20px 40px rgba(249, 115, 22, 0.1);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(252, 231, 243, 0.5) 0%, transparent 35%),
+                radial-gradient(circle at 100% 50%, rgba(255, 237, 213, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at 50% 100%, rgba(204, 251, 241, 0.3) 0%, transparent 35%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Utilities */
+        .gradient-text {
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #0d9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-zalo {
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+            color: #ffffff;
+            padding: 1.1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
+        }
+
+        .btn-zalo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(236, 72, 153, 0.45);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 7rem 0 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            background: var(--primary-light);
+            border: 1px solid rgba(249, 115, 22, 0.15);
+            color: #ea580c;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            font-weight: 500;
+        }
+
+        /* Empathy Questions Box */
+        .empathy-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-soft);
+            border-radius: 32px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .empathy-box::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 10rem;
+            font-family: var(--font-serif);
+            color: rgba(249, 115, 22, 0.05);
+            line-height: 1;
+        }
+
+        .empathy-heading {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .questions-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .question-card {
+            background: var(--bg-warm);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(249, 115, 22, 0.05);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .question-card i {
+            color: var(--secondary);
+        }
+
+        .truth-reveal {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            border-top: 1px dashed rgba(249, 115, 22, 0.2);
+            padding-top: 2rem;
+        }
+
+        /* Pain Section */
+        .pain-section {
+            padding: 5rem 0;
+            background: rgba(252, 231, 243, 0.2);
+            border-top: 1px solid rgba(236, 72, 153, 0.05);
+            border-bottom: 1px solid rgba(236, 72, 153, 0.05);
+            margin: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .pain-left h3 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+
+        .pain-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .pain-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .pain-item i {
+            color: #ef4444;
+            flex-shrink: 0;
+        }
+
+        .pain-right {
+            background: var(--bg-card);
+            border: 1px solid rgba(236, 72, 153, 0.1);
+            padding: 2.5rem;
+            border-radius: 28px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .pain-right h4 {
+            font-family: var(--font-serif);
+            color: var(--sage);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .voice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .voice-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-style: italic;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-warm);
+            border-radius: 12px;
+        }
+
+        .voice-item i {
+            color: var(--sage);
+            margin-top: 0.2rem;
+        }
+
+        /* Targets Section */
+        .targets {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .targets-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .target-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-soft);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .target-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .target-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .target-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Handbook Contents Section */
+        .contents {
+            padding: 5rem 0;
+        }
+
+        .contents-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .content-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: var(--transition-smooth);
+        }
+
+        .content-item:hover {
+            transform: translateY(-3px);
+            border-color: rgba(13, 148, 136, 0.2);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .content-num {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--sage);
+            background: var(--sage-light);
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .content-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .content-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .content-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Zalo Benefits Section */
+        .benefits {
+            padding: 5rem 0;
+            background: rgba(204, 251, 241, 0.2);
+            margin: 4rem 0;
+            border-top: 1px solid rgba(13, 148, 136, 0.05);
+            border-bottom: 1px solid rgba(13, 148, 136, 0.05);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(13, 148, 136, 0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 28px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 20px;
+            background: var(--sage-light);
+            color: var(--sage);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .benefit-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Form Registration & Zalo Section */
+        .action-box {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: 0.92fr 1.08fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .action-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .action-quote {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .action-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .reg-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-soft);
+            padding: 3.5rem 3rem;
+            border-radius: 36px;
+            box-shadow: 0 30px 60px rgba(249, 115, 22, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-title {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input {
+            background: var(--bg-warm);
+            border: 1px solid rgba(249, 115, 22, 0.12);
+            border-radius: 14px;
+            padding: 0.9rem 1.1rem;
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+            outline: none;
+        }
+
+        .form-input:focus {
+            border-color: var(--secondary);
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #a0aec0;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f97316' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+            padding-right: 2.5rem;
+        }
+
+        .form-commit {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            background: #f7f5f0;
+            border-top: 1px solid rgba(249, 115, 22, 0.05);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .questions-list {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .pain-grid, .action-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .targets-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contents-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            .empathy-box, .pain-right, .reg-form-card {
+                padding: 2rem 1.5rem;
+            }
+            .targets-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i data-lucide="gift"></i> TẶNG MIỄN PHÍ CẨM NANG THỰC CHIẾN
+            </div>
+            <h1 class="hero-title">Trò Chuyện Cùng Con Hiệu Quả</h1>
+            <p class="hero-subtitle">
+                Hiểu con sâu hơn — Nói con dễ nghe hơn — Đồng hành cùng con nhẹ nhàng hơn mỗi ngày
+            </p>
+            <a href="#register" class="btn-zalo">
+                <i data-lucide="check-square"></i> Đăng ký nhận bản miễn phí
+            </a>
+        </div>
+    </section>
+ 
+    <!-- Empathy Questions -->
+    <section class="container">
+        <div class="glass-panel empathy-box">
+            <h3 class="empathy-heading">Có bao giờ cha mẹ tự hỏi...</h3>
+            <div class="questions-list">
+                <div class="question-card">
+                    <i data-lucide="help-circle"></i>
+                    “Tại sao mình thương con rất nhiều, nhưng mỗi lần trò chuyện hai bên lại dễ bất hòa?”
+                </div>
+                <div class="question-card">
+                    <i data-lucide="help-circle"></i>
+                    “Tại sao có những lúc mẹ chỉ muốn tốt cho con, nhưng con lại phản ứng, cáu gắt, im lặng hoặc chống đối?”
+                </div>
+                <div class="question-card">
+                    <i data-lucide="help-circle"></i>
+                    “Tại sao cùng một câu nói, có bé nghe rất nhanh, có bé lại cảm thấy bị áp lực?”
+                </div>
+            </div>
+            <p class="truth-reveal">
+                <span style="color: var(--secondary);">Sự thật là:</span> Không phải cha mẹ không thương con. Cũng không phải con không ngoan. Nhiều khi vấn đề nằm ở chỗ mẹ đang dùng ngôn ngữ của mẹ, nhưng con lại cần một cách tiếp nhận khác.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pain Section -->
+    <section class="pain-section">
+        <div class="container pain-grid">
+            <div class="pain-left">
+                <span class="section-subtitle">Góc khuất nuôi con</span>
+                <h2 class="section-title">Vì sao cha mẹ càng muốn chia sẻ, con càng khép lòng?</h2>
+                <p style="color: var(--text-muted); margin: 1.5rem 0 2rem 0; font-size: 1.05rem;">
+                    Trong cuộc sống hằng ngày, mẹ rất dễ nghĩ rằng con bướng, con lười, con chống đối khi gặp các tình huống:
+                </p>
+                <ul class="pain-list">
+                    <li class="pain-item"><i data-lucide="x-circle"></i> Cha mẹ nhắc học bài, con khó chịu.</li>
+                    <li class="pain-item"><i data-lucide="x-circle"></i> Cha mẹ góp ý, con cãi lại hoặc im lặng.</li>
+                    <li class="pain-item"><i data-lucide="x-circle"></i> Cha mẹ càng nói nhiều, con càng muốn tránh né.</li>
+                    <li class="pain-item"><i data-lucide="x-circle"></i> Cha mẹ càng giải thích, con càng đóng chặt lòng.</li>
+                </ul>
+            </div>
+            <div class="pain-right">
+                <h4>Nhưng ở góc nhìn sâu hơn, con đang muốn nói:</h4>
+                <div class="voice-list">
+                    <div class="voice-item"><i data-lucide="message-circle"></i> “Con cần cha mẹ lắng nghe con trước.”</div>
+                    <div class="voice-item"><i data-lucide="message-circle"></i> “Con sợ bị phán xét và áp đặt ý kiến.”</div>
+                    <div class="voice-item"><i data-lucide="message-circle"></i> “Con không biết diễn tả cảm xúc của mình thế nào.”</div>
+                    <div class="voice-item"><i data-lucide="message-circle"></i> “Con muốn được nói lên suy nghĩ riêng của con.”</div>
+                    <div class="voice-item"><i data-lucide="message-circle"></i> “Con muốn được lắng nghe cả những lúc con làm sai.”</div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; font-weight: 700; color: var(--primary);">
+                    Khi cha mẹ đổi cách tiếp cận, con sẽ đổi cách phản ứng!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="targets container">
+        <span class="section-subtitle">Đối tượng phù hợp</span>
+        <h2 class="section-title">Bản hướng dẫn này dành cho ai?</h2>
+        <div class="targets-grid">
+            <div class="target-card">
+                <div class="target-icon"><i data-lucide="baby"></i></div>
+                <p class="target-text">Cha mẹ đang nuôi dạy con trong độ tuổi từ 3 đến 15 tuổi.</p>
+            </div>
+            <div class="target-card">
+                <div class="target-icon"><i data-lucide="heart"></i></div>
+                <p class="target-text">Muốn thấu hiểu tâm lý, tính cách sâu bên trong con nhưng chưa biết bắt đầu từ đâu.</p>
+            </div>
+            <div class="target-card">
+                <div class="target-icon"><i data-lucide="volume-2"></i></div>
+                <p class="target-text">Thường xuyên bế tắc vì không thể tìm được tiếng nói chung khi trò chuyện cùng con.</p>
+            </div>
+            <div class="target-card">
+                <div class="target-icon"><i data-lucide="smile"></i></div>
+                <p class="target-text">Mong muốn xây dựng sợi dây kết nối bền chặt, trò chuyện cùng con như những người bạn.</p>
+            </div>
+        </div>
+        <p style="margin-top: 3rem; font-size: 1.15rem; font-style: italic; color: var(--sage); font-weight: 700; max-width: 800px; margin-left: auto; margin-right: auto;">
+            "Đây không phải là cẩm nang phán xét. Đây là bản giúp cha mẹ mở khóa thế giới nội tâm của con, để mỗi cuộc trò chuyện đều ngập tràn sự thấu hiểu."
+        </p>
+    </section>
+
+    <!-- Handbook Contents -->
+    <section class="contents container">
+        <div class="section-header">
+            <span class="section-subtitle">Khám phá cẩm nang</span>
+            <h2 class="section-title">Bên Trong Bản Hướng Dẫn Có GÌ?</h2>
+        </div>
+        <div class="contents-grid">
+            <div class="content-item">
+                <div class="content-num">01</div>
+                <div class="content-body">
+                    <h3 class="content-title">Tổng quan tương tác trò chuyện giữa Cha Mẹ và Con</h3>
+                    <p class="content-desc">Hiểu lý do vì sao hai mẹ con rất thương nhau nhưng dễ va chạm. Xác định xem con cần dẫn dắt bằng mục tiêu, cảm xúc hay ghi nhận.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">02</div>
+                <div class="content-body">
+                    <h3 class="content-title">Bảng 4 chỉ số cốt lõi</h3>
+                    <p class="content-desc">Ứng dụng Đường đời, Sứ mệnh, Linh hồn, Năm cá nhân để thấy rõ nhịp năng lượng tự nhiên của con và cách hỗ trợ con trong năm nay.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">03</div>
+                <div class="content-body">
+                    <h3 class="content-title">Chân dung năng lượng của Cha Mẹ</h3>
+                    <p class="content-desc">Giúp mẹ tự thấu hiểu bản thân: Mình dạy con bằng cách nào? Khi áp lực mình phản ứng ra sao để tránh tạo áp lực vô hình cho con.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">04</div>
+                <div class="content-body">
+                    <h3 class="content-title">Chân dung năng lượng của Con</h3>
+                    <p class="content-desc">Biết rõ con có xu hướng mạnh mẽ, nhạy cảm hay độc lập. Con dễ hợp tác theo cách nói nào và dễ tổn thương bởi lời nói nào.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">05</div>
+                <div class="content-body">
+                    <h3 class="content-title">Bản đồ trò chuyện tương tác Cha Mẹ - Con</h3>
+                    <p class="content-desc">Nhìn rõ sự khác biệt giữa "ngôn ngữ cha mẹ nói" và "ngôn ngữ con nghe". Giúp cha mẹ chuyển từ giáo huấn sang trò chuyện cùng con nhẹ nhàng.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">06</div>
+                <div class="content-body">
+                    <h3 class="content-title">Chìa khóa mở lời để con chia sẻ</h3>
+                    <p class="content-desc">Chỉ ra những thế mạnh tự nhiên của con mà mẹ có thể tận dụng để dịch chuyển mối quan hệ từ căng thẳng sang hợp tác vui vẻ.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">07</div>
+                <div class="content-body">
+                    <h3 class="content-title">Điểm dễ xung đột & Cách hóa giải</h3>
+                    <p class="content-desc">Nhận diện các tình huống dễ nổ ra mâu thuẫn và đưa ra các giải pháp hóa giải bằng những câu nói cực kỳ đơn giản.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">08</div>
+                <div class="content-body">
+                    <h3 class="content-title">Mẫu câu giao tiếp hàng ngày</h3>
+                    <p class="content-desc">Các mẫu câu mở lời để con không phòng thủ, cách khen ngợi ghi nhận sâu sắc và cách đặt giới hạn nhưng vẫn tôn trọng con.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">09</div>
+                <div class="content-body">
+                    <h3 class="content-title">Những câu NÊN NÓI và NÊN TRÁNH</h3>
+                    <p class="content-desc">Ví dụ trực quan thay đổi cách nói. Đổi "Sao lúc nào cũng cãi?" thành "Mẹ muốn nghe con nghĩ gì trước...". Giúp thay đổi cảm giác an toàn của con.</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-num">10</div>
+                <div class="content-body">
+                    <h3 class="content-title">Kịch bản xử lý mâu thuẫn thực tế</h3>
+                    <p class="content-desc">Kịch bản từng bước khi con khóc cáu, không muốn học bài hoặc khi mẹ lỡ nóng giận. Giúp mẹ luôn làm chủ tình huống.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Highlight Box for Kế hoạch 7 ngày -->
+        <div class="glass-panel" style="margin-top: 3rem; padding: 2.5rem; border-color: rgba(236, 72, 153, 0.2); background: rgba(252, 231, 243, 0.1);">
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <i data-lucide="calendar-days"></i> Điểm Nhấn Đặc Biệt: Kế hoạch 7 ngày trò chuyện kết nối Cha Mẹ - Con
+            </h3>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 1.5rem auto;">
+                Chỉ cần 10–15 phút chất lượng mỗi ngày, đồng hành cùng con qua các bước đơn giản được thiết kế sẵn để làm mềm lại mối quan hệ.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N1: Lắng nghe không sửa sai</span>
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N2: Khen điểm cụ thể</span>
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N3: Cho con lựa chọn nhỏ</span>
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N4: Cùng làm việc vui</span>
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N5: Quy tắc gia đình</span>
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N6: Gọi tên cảm xúc</span>
+                <span style="background:#fff; border: 1px solid var(--border-soft); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">N7: Sự ghi nhận tổng kết</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zalo Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Đồng hành trong nhóm</span>
+                <h2 class="section-title">Mẹ Nhận Được Gì Sau Khi Vào Nhóm Zalo?</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i data-lucide="file-text"></i></div>
+                    <h3 class="benefit-title">File tài liệu miễn phí</h3>
+                    <p class="benefit-desc">Nhận ngay bản hướng dẫn "Cách tương tác trò chuyện cùng con hiệu quả" định dạng PDF đẹp đẽ, dễ đọc.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i data-lucide="users"></i></div>
+                    <h3 class="benefit-title">Cộng đồng đồng hành</h3>
+                    <p class="benefit-desc">Nhận gợi ý ứng dụng vào đời sống hàng ngày, các mẫu câu giúp mẹ nói chuyện với con nhẹ nhàng.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i data-lucide="fingerprint"></i></div>
+                    <h3 class="benefit-title">Phân tích cá nhân hóa</h3>
+                    <p class="benefit-desc">Nhận định hướng đọc báo cáo tương tác cha mẹ-con theo tâm số học và cơ hội được hỗ trợ phân tích riêng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Registration & Zalo CTA -->
+    <section id="register" class="action-box container">
+        <div class="action-grid">
+            <div class="action-text">
+                <span class="section-subtitle" style="text-align: left;">Cơ hội kết nối</span>
+                <h2 class="action-quote">Tuổi thơ của con không chờ đợi cha mẹ hoàn hảo...</h2>
+                <p class="action-desc">
+                    Con không cần cha mẹ lúc nào cũng đúng. Con cần cha mẹ sẵn sàng lắng nghe và học cách trò chuyện cùng con mỗi ngày. Chỉ cần cha mẹ thay đổi cách mở lời, con đã có thể sẵn sàng chia sẻ.
+                </p>
+                <div style="display: flex; gap: 1rem; align-items: center; background: #fff; padding: 1.25rem 1.5rem; border-radius: 20px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-soft);">
+                    <i data-lucide="shield-check" style="color: var(--sage); width: 35px; height: 35px; flex-shrink: 0;"></i>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+                        <strong>Bảo mật thông tin:</strong> Thông tin của mẹ chỉ được dùng để gửi tài liệu và hỗ trợ phân tích tương tác mẹ-con.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Registration Form Card -->
+            <div class="reg-form-card" id="form-card">
+                <h3 class="form-title">Đăng Ký Nhận Bản Hướng Dẫn</h3>
+                
+                <form id="lead-form" class="form-fields" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Họ và tên cha/mẹ</label>
+                        <input type="text" id="mom-name" class="form-input" placeholder="Nguyễn Thị A" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Số điện thoại / Zalo</label>
+                            <input type="tel" id="mom-phone" class="form-input" placeholder="0901234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ngày sinh cha/mẹ</label>
+                            <input type="text" id="mom-birth" class="form-input" placeholder="dd/mm/yyyy" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Tên của con</label>
+                            <input type="text" id="child-name" class="form-input" placeholder="Bé Bo" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ngày sinh con</label>
+                            <input type="text" id="child-birth" class="form-input" placeholder="dd/mm/yyyy" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Vấn đề cha mẹ muốn cải thiện nhất khi trò chuyện với con</label>
+                        <select id="mom-problem" class="form-input form-select" required>
+                            <option value="" disabled selected>Chọn vấn đề...</option>
+                            <option value="khong-nghe-loi">Con bướng bỉnh, đóng lòng, khó chia sẻ, trò chuyện</option>
+                            <option value="cau-gat-im-lang">Con dễ cáu gắt, im lặng, cãi lại hoặc chống đối khi cha mẹ nói</option>
+                            <option value="luyen-hoc">Con lười học, mê game, trì hoãn, không nghe lời khuyên</option>
+                            <option value="thieu-tu-tin">Con nhút nhát, thu mình, không muốn trò chuyện hay tâm sự với cha mẹ</option>
+                            <option value="khac">Vấn đề khác</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-zalo" style="width: 100%; justify-content: center; margin-top: 1rem; padding: 1.1rem;">
+                        Nhận bản hướng dẫn miễn phí & Vào nhóm Zalo
+                    </button>
+                    
+                    <p class="form-commit">
+                        * Sau khi nhấn gửi thông tin, anh/chị sẽ tự động được chuyển hướng đến nhóm Zalo để nhận tài liệu trực tiếp.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">Tương Tác Trò Chuyện Cùng Con Hiệu Quả</p>
+            <p>&copy; 2026. Bản quyền nội dung thuộc về Nguyễn Lê Tuấn & cộng đồng Dream Mandala.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Khởi tạo các biểu tượng Lucide
+        lucide.createIcons();
+
+        // Xử lý gửi form đăng ký và chuyển hướng vào nhóm Zalo
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = "Đang xử lý...";
+            submitBtn.disabled = true;
+            
+            // Lấy dữ liệu từ form đăng ký
+            const momName = document.getElementById('mom-name').value.trim();
+            const momPhone = document.getElementById('mom-phone').value.trim();
+            const momBirth = document.getElementById('mom-birth').value.trim();
+            const childName = document.getElementById('child-name').value.trim();
+            const childBirth = document.getElementById('child-birth').value.trim();
+            const problem = document.getElementById('mom-problem').value;
+            
+            // Map giá trị hiển thị cho Vấn đề
+            const problemMap = {
+                "khong-nghe-loi": "Con bướng bỉnh, đóng lòng, khó chia sẻ, trò chuyện",
+                "cau-gat-im-lang": "Con dễ cáu gắt, im lặng, cãi lại hoặc chống đối khi cha mẹ nói",
+                "luyen-hoc": "Con lười học, mê game, trì hoãn, không nghe lời khuyên",
+                "thieu-tu-tin": "Con nhút nhát, thu mình, không muốn trò chuyện hay tâm sự với cha mẹ",
+                "khac": "Vấn đề khác"
+            };
+            const problemText = problemMap[problem] || problem;
+            
+            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxHa1CZedQD7q-8fitQiKk7qX38AnDnyp82UKtqZ_dJqcv6N7bOQyCscNKWq98_dBQr/exec";
+            const ZALO_GROUP_URL = "https://zalo.me/g/02h1da9wh0ypi4kwhou4";
+
+            // Chuẩn bị dữ liệu gửi đi dưới dạng FormData
+            const formData = new FormData();
+            formData.append("momName", momName);
+            formData.append("momPhone", momPhone);
+            formData.append("momBirth", momBirth);
+            formData.append("childName", childName);
+            formData.append("childBirth", childBirth);
+            formData.append("problem", problemText);
+
+            try {
+                if (GOOGLE_SCRIPT_URL !== "") {
+                    // Gửi dữ liệu sang Google Sheet qua fetch (sử dụng mode no-cors)
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: "POST",
+                        body: formData,
+                        mode: "no-cors"
+                    });
+                }
+            } catch (error) {
+                console.error("Lỗi gửi dữ liệu lên Google Sheet:", error);
+            }
+
+            alert("Đăng ký thông tin thành công! Hệ thống sẽ chuyển hướng bạn vào nhóm Zalo để nhận tài liệu.");
+            window.location.href = ZALO_GROUP_URL;
+        }
+    </script>
+</body>
+</html>
